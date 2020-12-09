@@ -1,18 +1,33 @@
 import styled from "styled-components";
 
 export const AppWrapper = styled.div`
-  text-align: center;
+  /* text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav content";
+
+  grid-template-columns: 2fr 10fr;
+  width: 70vw;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "content content";
+  }
 `;
 export const Header = styled.header`
-  background-color: #282c34;
-  height: 10vh;
+  grid-area: header;
+  background: #282c34;
   color: white;
 `;
 export const Wrapper = styled.div`
   display: flex;
-  width: 70vw;
+
   margin: 0 auto;
   justify-content: space-between;
 `;

@@ -1,7 +1,3 @@
-import React from "react";
+import { ProfileContainer } from "./Container";
 
-const ProfileComponent = () => {
-  return <h1>My profile</h1>;
-};
-
-export default ProfileComponent;
+export default ProfileContainer;

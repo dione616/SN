@@ -1,7 +1,4 @@
-import React from "react";
+import { FriendsPresentation } from "./Presentational";
+import { FriendsContainer } from "./Container";
 
-const FriendsComponent = () => {
-  return <h1>My friends</h1>;
-};
-
-export default FriendsComponent;
+export default FriendsContainer;

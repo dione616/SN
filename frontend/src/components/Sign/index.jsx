@@ -22,7 +22,7 @@ const SignComponent = () => {
           <Input type="password" placeholder="Enter your password" />
         </div>
         <div className="password">
-          <Input type="password" placeholder="Enter your password" />
+          <Input type="password" placeholder="Repeat your password" />
         </div>
         <Button>Submit</Button>
       </Form>
