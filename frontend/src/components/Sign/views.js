@@ -4,27 +4,23 @@ export const WrapperCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
   flex-direction: column;
 `;
 export const Form = styled.form`
-  padding: 40px 40px 10px 40px;
   border-radius: 10px;
   max-width: 50vw;
-  background: #03a9f48f;
 `;
 export const Input = styled.input`
   margin-top: 10px;
-  padding: 5px;
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.fonts.small};
   border-radius: 5px;
   outline: none !important;
   border: none;
 `;
 export const Button = styled.button`
   margin-top: 20px;
-  padding: 5px;
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.fonts.small};
   outline: none !important;
   border: none;
   cursor: pointer;

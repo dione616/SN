@@ -6,9 +6,9 @@ export const AppWrapper = styled.div`
   flex-direction: column;
 `;
 export const Header = styled.header`
-  background-color: #282c34;
+  grid-area: header;
   height: 10vh;
-  color: white;
+  color: black;
   display: flex;
 `;
 export const Wrapper = styled.div`
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
 
   & > a {
     text-decoration: none;
-    color: white;
+    color: #cdd0d2;
   }
 `;
 export const Logo = styled.div`
@@ -36,7 +36,11 @@ export const Auth = styled.button`
   border: 1px solid #03a9f4;
   padding: 10px 25px;
   cursor: pointer;
+  background: transparent;
 
+  &:hover {
+    background: #fefefe1f;
+  }
   &:focus {
     outline: none !important;
   }
