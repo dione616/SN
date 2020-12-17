@@ -11,13 +11,7 @@ export const Form = styled.form`
   border-radius: 10px;
   max-width: 50vw;
 `;
-export const Input = styled.input`
-  margin-top: 10px;
-  font-size: ${({ theme }) => theme.fonts.small};
-  border-radius: 5px;
-  outline: none !important;
-  border: none;
-`;
+
 export const Button = styled.button`
   margin-top: 20px;
   font-size: ${({ theme }) => theme.fonts.small};

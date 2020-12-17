@@ -29,19 +29,11 @@ export const Logo = styled.div`
   font-family: "Big Shoulders Stencil Display", cursive;
   font-size: 3rem;
 `;
-export const Auth = styled.button`
-  align-self: center;
-  color: #03a9f4;
-  border-radius: 5px;
-  border: 1px solid #03a9f4;
-  padding: 10px 25px;
-  cursor: pointer;
-  background: transparent;
+export const Nav = styled.div`
+  display: flex;
+  align-items: center;
 
-  &:hover {
-    background: #fefefe1f;
-  }
-  &:focus {
-    outline: none !important;
+  & > a {
+    text-decoration: none;
   }
 `;
