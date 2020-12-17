@@ -5,8 +5,8 @@ import { Form, Field, Input } from "../../shared/Form/views";
 import { LinkButton } from "../../shared/LinkButton/views";
 
 const ProfilePresentation = () => {
-  const { profileData, setValues } = React.useContext(AppBLContext);
-  const [data, setData] = useState(profileData);
+  const { setValues } = React.useContext(AppBLContext);
+  const [data, setData] = useState({ name: "", surname: "" });
 
   const changeValues = (e) => {
     const { value } = e.target;

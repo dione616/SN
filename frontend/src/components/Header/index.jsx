@@ -27,7 +27,7 @@ const HeaderComponent = () => {
           <Link to="/articles" style={{ display: "flex" }}>
             <LinkButton>Articles</LinkButton>
           </Link>
-          <Link to="/add_articles" style={{ display: "flex" }}>
+          <Link to="/add_article" style={{ display: "flex" }}>
             <LinkButton>Add article</LinkButton>
           </Link>
           <Link to="/profile" style={{ display: "flex" }}>
