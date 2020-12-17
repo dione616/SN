@@ -6,8 +6,8 @@ export const AppWrapper = styled.div`
   flex-direction: column; */
   display: grid;
   grid-template-areas:
-    "header header"
-    "nav content";
+    "header"
+    "content";
 
   grid-template-columns: 2fr 10fr;
   width: 70vw;
@@ -16,7 +16,6 @@ export const AppWrapper = styled.div`
   @media (max-width: 500px) {
     grid-template-areas:
       "header header"
-      "nav nav"
       "content content";
   }
 `;

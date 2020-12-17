@@ -1,5 +1,6 @@
 import React from "react";
-import { WrapperCenter, Form, Input, Button, LoginWith, Img } from "./views";
+import { Input } from "../shared/Form/views";
+import { WrapperCenter, Form, Button, LoginWith, Img } from "./views";
 
 const SignComponent = () => {
   return (
