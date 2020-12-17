@@ -5,12 +5,12 @@ import { LinkButton } from "../shared/LinkButton/views";
 import { Header, Wrapper, Logo, Nav } from "./views";
 
 const HeaderComponent = () => {
-  const { profileData } = React.useContext(AppBLContext);
+  const { data } = React.useContext(AppBLContext);
   const showProfileData = () => {
-    return profileData.name || profileData.surname ? (
+    return data.name || data.surname ? (
       <LinkButton
         style={{ border: "none" }}
-      >{`${profileData.name} ${profileData.surname}`}</LinkButton>
+      >{`${data.name} ${data.surname}`}</LinkButton>
     ) : (
       <Link to="/sign" style={{ display: "flex" }}>
         <LinkButton>SignIn/SignUp</LinkButton>
