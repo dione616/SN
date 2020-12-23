@@ -6,15 +6,18 @@ const AppBLContext = React.createContext({
     name: "",
     surname: "",
   },
+  setValues: (newProfileData: any) => {},
 });
 
-const AppBLContextProvider = ({ children }) => {
+const AppBLContextProvider = ({ children }: { children: any }) => {
   const [profileData, setProfileData] = useState({ name: "", surname: "" });
-  const setValues = (newProfileData) => {
+  const setValues = (newProfileData: any) => {
     setProfileData(newProfileData);
   };
   return (
-    <AppBLContext.Provider value={{ profileData, setValues }}>
+    <AppBLContext.Provider
+      value={{ auth: false, data: profileData, setValues }}
+    >
       {children}
     </AppBLContext.Provider>
   );

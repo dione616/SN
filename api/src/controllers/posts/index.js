@@ -1,31 +1,15 @@
-require("dotenv").config();
-
 const express = require("express");
-const { Config } = require("./config");
-const postRoutes = require("./src/controllers/posts");
 
-const app = express();
+let router = express.Router();
 
-app.use("/posts", postRoutes);
-/*<------------ HOME ------------>*/
-app.get("/", async (_req, res, next) => {
-  try {
-    res.send(`Hello World!`);
-  } catch (error) {
-    next(error);
-  }
-});
-
-/*<------------ POSTS ------------>*/
-
-/* app.get("/posts", async (_req, res, next) => {
+router.get("/", async (_req, res, next) => {
   try {
     res.send(`All posts`);
   } catch (error) {
     next(error);
   }
 });
-app.get("/posts/:id", async (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
 
@@ -34,7 +18,7 @@ app.get("/posts/:id", async (req, res, next) => {
     next(error);
   }
 });
-app.post("/posts", async (_req, res, next) => {
+router.post("/", async (_req, res, next) => {
   try {
     const newPost = {
       id: "0",
@@ -49,7 +33,7 @@ app.post("/posts", async (_req, res, next) => {
     next(error);
   }
 });
-app.put("/posts/:id", async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     //update post by id with new data
@@ -58,7 +42,7 @@ app.put("/posts/:id", async (req, res, next) => {
     next(error);
   }
 });
-app.delete("/posts/:id", async (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     //delete post by id
@@ -66,10 +50,6 @@ app.delete("/posts/:id", async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-}); */
-
-const PORT = Config.getProperty("PORT");
-
-app.listen(PORT, () => {
-  console.log(`[Server] is running on port: ${PORT}`);
 });
+
+module.exports = router;
